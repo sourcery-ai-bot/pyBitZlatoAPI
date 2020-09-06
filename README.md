@@ -12,7 +12,7 @@ pip install python-jose
 
 ### How it's work?
 1. Get account purchase orders 
-```
+```python
 from bitzlato import Bitzlato
 
 bot = bitzlato.Bitzlato(parameters=<dict with bitzlato key>, email=<your bitzlato account email>)
@@ -22,7 +22,7 @@ print(result)
 
 2. Get all market orders with parameters
 
-```
+```python
 from bitzlato import Bitzlato
 
 bot = bitzlato.Bitzlato(parameters=<dict with bitzlato key>, email=<your bitzlato account email>)
