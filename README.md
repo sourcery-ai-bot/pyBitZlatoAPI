@@ -13,6 +13,7 @@ pip install python-jose
 
 ### How it's work?
 1. Get account purchase orders 
+Token parameter 'kid' should be 1
 ```python
 from bitzlato import Bitzlato
 
