@@ -68,7 +68,7 @@ class Bitzlato():
                     pass
         return local_array
 
-    def set_new_price(self, order_id, price):
+    def set_new_price(self, order_id, price) -> dict:
         result = self.conn.put(f'https://bitzlato.com/api/p2p/dsa/{order_id}', headers={
             "Authorization": "Bearer " + self.connector()
         }, json={
@@ -76,9 +76,8 @@ class Bitzlato():
         })
         return result.json()
 
-    def get_paymethods(self):
-        result = self.conn.get('https://bitzlato.com/api/p2p/dsa/paymethods/purchase/RUB/BTC/',
-                               headers={
-                                   "Authorization": "Bearer " + self.connector()
-                               })
+    def get_paymethods(self) -> dict:
+        result = self.conn.get('https://bitzlato.com/api/p2p/dsa/paymethods/purchase/RUB/BTC/', headers={
+            "Authorization": "Bearer " + self.connector()
+        })
         return result.json()
