@@ -31,5 +31,3 @@ result = bot.get_all_orders(cryptocurrency='BTC', currency='RUB', is_owner_activ
 print(result)
 ```
 
-
-#bitzlato
