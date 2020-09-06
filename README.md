@@ -3,7 +3,15 @@ Python script for BitZlatoAPI
 
 It is unofficial lib for work with bitzlato.com API. The repository will updates...
 
-## How it's work?
+### Dependencies
+```
+pip install requests
+pip install python-jose
+```
+
+
+### How it's work?
+1. Get account purchase orders 
 ```
 from bitzlato import Bitzlato
 
