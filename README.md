@@ -26,7 +26,7 @@ print(result)
 from bitzlato import Bitzlato
 
 bot = bitzlato.Bitzlato(parameters=<dict with bitzlato key>, email=<your bitzlato account email>)
-result = bot.get_all_orders(cryptocurrency='BTC', currency='RUB', is_owner_active = True, limit=20,
+result = bot.get_all_orders(cryptocurrency='BTC', currency='RUB', is_owner_active=True, limit=20,
                             pay_method='443', order_type='purchase')
 print(result)
 ```
