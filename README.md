@@ -1,5 +1,5 @@
 # pyBitZlatoAPI
-I think it is a python lib, but it is looks like python script for bitzlato.com API :)
+I think it is a python lib, but it is looks like python script for bitzlato API :)
 
 It is unofficial lib for work with bitzlato.com API. The repository will updates...
 
@@ -30,3 +30,6 @@ result = bot.get_all_orders(cryptocurrency='BTC', currency='RUB', is_owner_activ
                             pay_method='443', order_type='purchase')
 print(result)
 ```
+
+
+#bitzlato
