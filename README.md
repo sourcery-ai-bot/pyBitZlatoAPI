@@ -1,5 +1,5 @@
 # pyBitZlatoAPI
-Python script for BitZlatoAPI
+I think it is a python lib, but it is looks like python script for bitzlato.com API :)
 
 It is unofficial lib for work with bitzlato.com API. The repository will updates...
 
