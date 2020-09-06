@@ -16,5 +16,17 @@ pip install python-jose
 from bitzlato import Bitzlato
 
 bot = bitzlato.Bitzlato(parameters=<dict with bitzlato key>, email=<your bitzlato account email>)
-bot.get_my_orders('purchase')
+result = bot.get_my_orders('purchase')
+print(result)
+```
+
+2. Get all market orders with parameters
+
+```
+from bitzlato import Bitzlato
+
+bot = bitzlato.Bitzlato(parameters=<dict with bitzlato key>, email=<your bitzlato account email>)
+result = bot.get_all_orders(cryptocurrency='BTC', currency='RUB', is_owner_active = True, limit=20,
+                            pay_method='443', order_type='purchase')
+print(result)
 ```
