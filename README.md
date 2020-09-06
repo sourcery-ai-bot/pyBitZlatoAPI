@@ -13,11 +13,10 @@ pip install python-jose
 
 ### How it's work?
 1. Get account purchase orders 
-Token parameter 'kid' should be 1
 ```python
 from bitzlato import Bitzlato
 
-bot = bitzlato.Bitzlato(parameters=<dict with bitzlato key>, email=<your bitzlato account email>)
+bot = bitzlato.Bitzlato(parameters=<dict with bitzlato key>, email=<your bitzlato account email>) #  Token parameter 'kid' should be 1
 result = bot.get_my_orders('purchase')
 print(result)
 ```
