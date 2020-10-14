@@ -8,12 +8,7 @@ from jose.constants import ALGORITHMS
 
 class Bitzlato():
     def __init__(self, parameters: dict, email: str):
-        self.kty = parameters['kty']
-        self.alg = parameters['alg']
-        self.crv = parameters['crv']
-        self.x = parameters['x']
-        self.y = parameters['y']
-        self.d = parameters['d']
+        self.key = parameters
         self.email = email
         self.kid = '1'
         self.conn = requests.Session()
@@ -27,14 +22,7 @@ class Bitzlato():
             "iat": int(ts),
             "jti": hex(random.getrandbits(64))
         }
-        key = {
-            "kty": self.kty,
-            "alg": self.alg,
-            "crv": self.crv,
-            "x": self.x,
-            "y": self.y,
-            "d": self.d
-        }
+        key = self.key
         token = jws.sign(claims, key, headers={"kid": self.kid}, algorithm=ALGORITHMS.ES256)
         return token
 
