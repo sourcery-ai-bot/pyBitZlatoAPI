@@ -32,3 +32,6 @@ result = bot.get_all_orders(cryptocurrency='BTC', currency='RUB', is_owner_activ
 print(result)
 ```
 
+# Some notes
+![alt text](https://i.ibb.co/GChV6p4/1.jpg)
+In some cases it is not max value, it is realMax value.
