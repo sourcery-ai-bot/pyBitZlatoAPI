@@ -23,8 +23,9 @@ class Bitzlato():
             "jti": hex(random.getrandbits(64))
         }
         key = self.key
-        token = jws.sign(claims, key, headers={"kid": self.kid}, algorithm=ALGORITHMS.ES256)
-        return token
+        return jws.sign(
+            claims, key, headers={"kid": self.kid}, algorithm=ALGORITHMS.ES256
+        )
 
     def get_all_orders(self, cryptocurrency: str, currency: str, is_owner_active: bool, limit: int,
                        pay_method: str, order_type: str) -> dict:
@@ -39,8 +40,7 @@ class Bitzlato():
                 "limit": 20,
                 "paymethod": f'{pay_method}'
         })
-        response = result.json()
-        return response
+        return result.json()
 
     def get_account_orders_by_order_type(self, order_type) -> list:
         result = self.conn.get('https://bitzlato.com/api/p2p/dsa/all', headers={
